@@ -10,7 +10,7 @@ A simple library that allows you to select images from the device library or dir
 Screenshots
 --------
 
-<img src="https://user-images.githubusercontent.com/4979755/41592707-a8c7b4b8-73e7-11e8-9273-ba4900f69f87.png" height="683" width="384"> <img src="https://user-images.githubusercontent.com/4979755/41592708-a906efde-73e7-11e8-9681-dfa8047ccacd.png" height="683" width="384">
+<img src="https://user-images.githubusercontent.com/4979755/64321916-b86e2080-cfeb-11e9-9644-efde1f2a146b.png" height="683" width="384"> <img src="https://user-images.githubusercontent.com/4979755/64321989-da67a300-cfeb-11e9-844a-8b2b32d6ec8d.png" height="683" width="384">
 
 Download
 --------
@@ -29,7 +29,7 @@ allprojects {
 Add the dependency
 ```java
 dependencies {
-    implementation 'com.github.nguyenhoanglam:ImagePicker:1.3.2'
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.3.3'
 }
 ```
 
@@ -85,7 +85,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 What's New
 --------
 
-- Support Glide 4.9.0
+- Fix selected images can not be unselected after restart ImagePicker.
 
 
 License

@@ -17,6 +17,7 @@ import com.nguyenhoanglam.imagepicker.ui.common.BaseRecyclerViewAdapter;
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImageLoader;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -110,7 +111,14 @@ public class ImagePickerAdapter extends BaseRecyclerViewAdapter<ImagePickerAdapt
     }
 
     public void removeSelected(Image image, int position) {
-        selectedImages.remove(image);
+        Iterator<Image> itr = selectedImages.iterator();
+        while (itr.hasNext()) {
+            Image itrImage = itr.next();
+            if (itrImage.getId() == image.getId()) {
+                itr.remove();
+                break;
+            }
+        }
         notifyItemChanged(position);
         notifySelectionChanged();
     }
